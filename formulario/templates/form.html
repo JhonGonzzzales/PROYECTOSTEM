@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Formulario{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h2>Formulario de saludo</h2>
+        <form action="saludo" method="post">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Escribe tu nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+{% endblock %}
