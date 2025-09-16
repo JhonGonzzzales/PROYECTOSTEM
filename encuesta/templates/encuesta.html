@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Encuesta{% endblock %}
+
+{% block content %}
+    <h2>¿Cuál es tu lenguaje favorito?</h2>
+    <form action="{{ url_for('procesar_encuesta') }}" method="post">
+        <div class="mb-3">
+            <label for="lenguaje" class="form-label">Elige tu lenguaje:</label>
+            <select class="form-select" name="lenguaje" required>
+                <option value="Python">Python</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Java">Java</option>
+                <option value="Otro">Otro</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="experiencia" class="form-label">Nivel de experiencia:</label>
+            <select class="form-select" name="experiencia" required>
+                <option value="Trainee">Trainee</option>
+                <option value="Junior">Junior</option>
+                <option value="Semisenior">Semisenior</option>
+                <option value="Senior">Senior</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+{% endblock %}
